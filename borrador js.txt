@@ -1,0 +1,35 @@
+const bar = document.querySelector("#bar");
+const menu = document.querySelector(".menu");
+const section = document.querySelector(".section");
+const nav = document.querySelector(".nav");
+const section_nosotros = document.querySelector(".section-nosotros");
+
+const section_contenido = document.querySelector(".section-contenido");
+const nosotros = document.querySelector(".nosotros");
+bar.addEventListener("click", function() {
+
+    menu.style.display = "grid";
+    nav.className = "nav-bar";
+    const nav_bar = document.querySelector(".nav_bar");
+
+    function menuclick(link, div) {
+        const section = document.querySelector("#section");
+        const nav_bar = document.querySelector(".nav-bar");
+
+        link.addEventListener("click", function() {
+            section.style.display = "none";
+            div.style.display = "unset";
+            nav_bar.style.display = "none";
+            div.setAttribute("id", "section");
+        })
+    }
+
+    const boton = document.querySelector("#boton");
+    boton.addEventListener("click", function() {
+        console.log("hola");
+
+    })
+
+    menuclick(nosotros, section_nosotros);
+
+})

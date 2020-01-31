@@ -1,0 +1,369 @@
+/**/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+
+.brand {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: borderbox;
+    padding-left: 0.8rem;
+}
+
+.brand a img {
+    width: 100%;
+}
+
+.menu {
+    display: none;
+}
+
+.nav {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: borderbox;
+    padding-right: 0.8rem;
+}
+
+.section {
+    grid-row: 2/5;
+    grid-column: 1/3;
+    box-sizing: border-box;
+    padding-bottom: 1rem;
+    background-color: white;
+}
+
+.img2 {
+    width: 100%;
+    position: relative;
+}
+
+.img1 {
+    display: none;
+}
+
+.section-contenido {
+    grid-row: 5/7;
+    grid-column: 1/3;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+    background-color: white;
+    position: relative;
+    top: 2rem;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-end;
+    text-align: center;
+}
+
+h3 {
+    margin: 0;
+    border-bottom: solid black 0.3rem;
+    font-weight: 550;
+    padding-bottom: 0;
+}
+
+h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.texto h1 {
+    font-size: 2.5rem;
+    font-weight: 550;
+    padding-top: 0.5rem;
+    margin: 0;
+}
+
+.button-info {
+    display: none;
+}
+
+.right-nav {
+    grid-row: 7/8;
+    grid-column: 1/3;
+    box-sizing: border-box;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 3rem;
+}
+
+.contacto {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+.contacto a i {
+    color: black;
+}
+
+.right-nav .terminos {
+    display: none;
+}
+
+.social {
+    grid-row: 7/8;
+    grid-column: 2/3;
+    font-size: 2rem;
+    padding-top: 3rem;
+}
+
+.social a i {
+    color: black;
+    font-size: 2rem;
+}
+
+.social a:nth-child(2) i {
+    padding-left: 0.8rem;
+}
+
+.button {
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 1rem;
+}
+
+.section-nosotros {
+    display: none;
+    grid-row: 2/7;
+    grid-column: 1/3;
+}
+
+@media (min-width:798px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+    }
+    .brand {
+        grid-column: 1/4;
+        grid-row: 1/3;
+        padding-left: 1rem;
+    }
+    .brand a img {
+        width: 50%;
+    }
+    .right-nav .terminos {
+        display: unset;
+        padding-bottom: 1rem;
+    }
+    .terminos a {
+        text-decoration: none;
+        color: black;
+    }
+    h1,
+    h4 {
+        padding-bottom: 2rem;
+    }
+    .terminos a:first-child {
+        border-right: 3px solid black;
+        padding-right: 1rem;
+    }
+    .terminos a:last-child {
+        padding-left: 1rem;
+    }
+    .right-nav {
+        grid-column: 11/13;
+        grid-row: 1/3;
+        display: flex;
+        flex-direction: column;
+        padding-top: 1.5rem;
+        padding-left: 0;
+    }
+    .contacto {
+        padding-top: 0.5rem;
+        padding-right: 3rem;
+    }
+    .section {
+        grid-row: 3/13;
+        grid-column: 1/13;
+        padding-bottom: 0;
+    }
+    .img2 {
+        display: none;
+    }
+    .img1 {
+        display: unset;
+        height: 100%;
+        width: 100%;
+    }
+    .bar {
+        display: none;
+    }
+    .nav {
+        grid-column: 5/10;
+        grid-row: 1/3;
+        display: flex;
+    }
+    .menu {
+        display: unset;
+    }
+    .menu ul {
+        display: flex;
+        flex-direction: row;
+    }
+    .menu ul li {
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.5rem;
+        list-style: none;
+    }
+    .menu ul li a {
+        text-decoration: none;
+        color: black;
+        padding: 1rem;
+        border-radius: 0.2rem;
+    }
+    .menu ul li a:hover {
+        background-color: #E5E8E8;
+        opacity: 0.5;
+        -webkit-box-shadow: 6px 6px 5px 0px rgba(189, 183, 189, 1);
+        -moz-box-shadow: 6px 6px 5px 0px rgba(189, 183, 189, 1);
+        box-shadow: 6px 6px 5px 0px rgba(189, 183, 189, 1);
+        border-bottom: 0.2rem solid black;
+    }
+    .section-contenido {
+        background-color: transparent;
+        color: white;
+    }
+    .social {
+        grid-row: 12/13;
+        grid-column: 11/13;
+        padding-bottom: 2rem;
+    }
+    .social a:first-child {
+        padding-right: 2rem;
+    }
+    .social a i {
+        color: white;
+    }
+    .section-contenido .texto {
+        text-align: left;
+        align-items: flex-start;
+    }
+    h3 {
+        border-bottom: 0.3rem white solid;
+    }
+    .texto p {
+        font-size: 1rem;
+    }
+    .texto h1 {
+        font-size: 4rem;
+    }
+    .button-info {
+        display: unset;
+        grid-column: 2/3;
+        grid-row: 10/11;
+        padding-left: 0.8rem;
+    }
+    .button-info button {
+        background-color: transparent;
+        color: white;
+        border: 4px solid white;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+    }
+}
+
+
+/*menu desplegable*/
+
+.nav-bar {
+    grid-column: 1/3;
+    grid-row: 1/8;
+    background: black;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: navbarefect;
+    animation-duration: 2s;
+}
+
+.nav-bar .menu {
+    width: 100%;
+}
+
+.nav-bar .menu ul {
+    width: ;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar .menu ul li {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.nav-bar .menu ul li a:hover {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white;
+    color: black;
+}
+
+.nav-bar .bar {
+    display: none;
+}
+
+.nav-bar ul {}
+
+.nav-bar .menu ul li a {
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    list-style: none;
+    height: 100%;
+}
+
+.nav-bar .menu ul li {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+@keyframes navbarefect {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
